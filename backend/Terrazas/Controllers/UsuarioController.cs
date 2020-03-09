@@ -25,9 +25,17 @@ namespace Terrazas.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable>> GetUsers()
         {
-            var usuarios = _context.Usuario.AsQueryable();            
+            try
+            {
+                var usuarios = _context.Usuario.AsQueryable();
 
-            return await usuarios.ToListAsync();
+                return await usuarios.ToListAsync();
+            }catch(Exception ex)
+            {
+                ex.Message.ToString();
+                return NotFound();
+            }
+
 
         }
     }
