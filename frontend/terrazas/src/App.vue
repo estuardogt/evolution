@@ -1,45 +1,26 @@
 <template>
-    <v-app>  
+  <div id="app">
+    <v-app>
+      <v-app-bar app color="primary" dark>
+        <v-toolbar-title>Compañia de Agua Las terrazas</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn text rounded>Inicio</v-btn>
+        <v-btn text rounded>LogIn</v-btn>
+      </v-app-bar>
 
       <v-content>
-        <v-card width="500" class="mx-auto" mt-5>
-          <v-card-title>
-                <h2 class="display-1">LOGIN</h2>
-            </v-card-title>
-          <v-card-text>
-              <v-form>                  
-                  <v-text-field 
-                      label="Username" 
-                      prepend-icon="mdi-account-circle"
-                  />
-                  <v-text-field 
-                    :type="showPassword ? 'text' : 'password'"
-                    label="Password" 
-                    prepend-icon="mdi-lock"
-                    :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-                    @click:append="showPassword = !showPassword "
-                  />
-
-              </v-form>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-actions>
-                <v-btn color="success">Register</v-btn>
-                <v-spacer></v-spacer>
-                <v-btn color="info">Login</v-btn>
-            </v-card-actions>          
-        </v-card>
+        <router-view></router-view>
+      </v-content>
     </v-app>
+  </div>
 </template>
 
 
 <script>
 export default {
-  name: 'App',
-  data () {
-    return {
-      showPassword: false
-    }
+  name: "App",
+  data() {
+    return {};
   }
-}
+};
 </script>
