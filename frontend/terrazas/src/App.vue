@@ -1,17 +1,9 @@
 <template>
     <v-app>  
 
-
-        <v-card width="500" class="mx-auto mt-5">
-           <v-img
-          :src="require('./assets/logo.png')"
-          class="my-3"
-          contain
-          height="80"
-        />         
-        </v-card>        
-        <v-card width="500" class=mx-auto mt-5>
-            <v-card-title>               
+      <v-content>
+        <v-card width="500" class="mx-auto" mt-5>
+          <v-card-title>
                 <h2 class="display-1">LOGIN</h2>
             </v-card-title>
           <v-card-text>
@@ -42,7 +34,6 @@
 
 
 <script>
-
 export default {
   name: 'App',
   data () {
