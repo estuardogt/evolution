@@ -15,9 +15,7 @@
           width="60"
         />
 
-      </div>
 
-      <v-spacer></v-spacer>
 
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -35,7 +33,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
